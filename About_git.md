@@ -230,3 +230,15 @@ $ git tag    #tag 조회하기
 $ git show Version_2  
 
 > 출처 : https://gorokke.tistory.com/22
+
+### 20220419
+- 깃허브 커밋한 폴더, 파일명 변경하는 법
+1. 변경하고 싶은 폴더가 있는 git 프로젝트 폴더로 이동
+2. git mv 변경전폴더경로 변경하고자하는 경로   ($ git mv ./20220417.md ./About_git.md )   ( -mv는 Move or rename a file,)
+3. $ git commit -m "커밋내용"
+4. vscode 하단 변경된 부분 숫자를 누르고 커밋하면 끝!
+
+- 잘못 올라간 폴더 및 파일 삭제하기
+1. $ git rm --cached -r 폴더명   (cached가 없으면 로컬저장소 폴더 또는 파일도 삭제하므로 주의)
+2. $ git commit -m "불필요한 폴더 및 파일 삭제"
+3. $ git push -u origin main
