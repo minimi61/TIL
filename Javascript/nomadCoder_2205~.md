@@ -22,7 +22,7 @@ element의 내부볼 수 있다.
     -   getElementById : 하나의 값(id)
     -   getElementByClassName: 배열(배열을 가져오면 .innerText와 같은 방법 사용 x)
     -   getElementByTagName : 배열(위와 동일)
-    -   querySelector : getElementById는 하위 태그를 선택할 수 없다. 이 때 사용하는 것. CSS selector처럼 원하는 요소 선택이 가능하고 innerText 사용 가능<br>
+    -   querySelector : getElementById는 하위 태그를 선택할 수 없다. 이 때 사용하는 것. 한개만 선택, CSS selector처럼 원하는 요소 선택이 가능하고 innerText 사용 가능<br>
     querySelector("#id명") = getElementById("id명")
     -   querySelectorAll : 동일한 class를 가진 태그가 여러개인 경우 다 불러올 때 쓴다.
 - Event
@@ -86,3 +86,14 @@ setter 메소드: 인스턴스나 클래스 변수의 값을 적용하는 메소
 
     -   // event 발생시 브라우저가 해당 함수 실행
     -   // clickSubmit(argument=event로부터 정보를 받아 해당 함수로 넘겨줌)
+
+
+### 4.3~ (220524) localstorage활용과 저장한 값 새로고침해도 나오지 않게 하는법
+-   visibility:hidden은 공간은 그대로 두고 보이지만 않는건데 display:none은 잡아둔 공간도 사라짐
+-   local storage: 
+    -   API의 이름
+    -   저장할 수 있게 해줌
+    -   사용 방법: localstorage.뒤에 
+        -   .removeItem(저장된 아이템제거)
+        -   .getItem(value 불러오기)
+        -   .setItem(key,value 입력)
