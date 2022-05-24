@@ -242,3 +242,11 @@ $ git show Version_2
 1. $ git rm --cached -r 폴더명   (cached가 없으면 로컬저장소 폴더 또는 파일도 삭제하므로 주의)
 2. $ git commit -m "불필요한 폴더 및 파일 삭제"
 3. $ git push -u origin main
+
+
+### 20220524
+- 컴퓨터로 작업해서 원격저장소에 올렸는데 노트북에 git pull해도 반영이 안된다
+    -   해결방법: 
+    -   배포/빌드 서버 등에 계속해서 최근 항목만을 가져오는 등의 경우나 로컬에 있는 모든 내용을 덮어쓰려는 경우 사용하면 될 것 같음
+    -   git fetch --all 
+    -   git reset --hard origin/main
