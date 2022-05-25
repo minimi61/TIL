@@ -72,8 +72,10 @@ setter 메소드: 인스턴스나 클래스 변수의 값을 적용하는 메소
     -   js에서 해결하기 위해서는 form의 submit event를 감지하고 있는 것을 loginForm.addEventListener("submit", clickSubmit ) 이렇게 바꿈,<br>submit은 엔터를 누르거나 버튼을 클릭할 때 발생함
 -   const clickSubmit = (potato) => {<br>
     potato.preventDefault();
-    -   // preventDefault : 어떤 event의 기본 행동(어떤 function에 대해 브라우저가 기본적으로 수행하는 동작)이 
-    -   // 발생되지 않도록 막는것<br>
+    -   //<a>태그나 <submit>과 같은 태그처럼 몇몇 태그는 특정 기능을 가지고 있다.
+        -   a태그는 href를 통해 특정 사이트로 이동하거나, submit태그는 값을 전송하면서 창이 새로고침(reload)된다.
+        -   이런 태그의 이벤트 기능을 preventDefault를 통하여 동작하지 않도록 막을 수 있다.
+    -   // preventDefault : 어떤 event의 기본 행동(어떤 function에 대해 브라우저가 기본적으로 수행하는 동작)이 발생되지 않도록 막는것<br>
     console.log(potato)
     -   // 위의 콘솔 찍어보면 정보가 뜸, 이 정보가 방금 실행된 event임
     -   // clickSubmit에 대해 하나의 argument로 정보 받음
@@ -97,3 +99,22 @@ setter 메소드: 인스턴스나 클래스 변수의 값을 적용하는 메소
         -   .removeItem(저장된 아이템제거)
         -   .getItem(value 불러오기)
         -   .setItem(key,value 입력)
+
+
+### 4.7~ (220525)
+-   <button>과 <input type="submit" > 차이
+    -   폼 전송 기능을 하는 <input type="submit"> 과 <button> 은 기능적으로 동일하다. 기본적으로 button 요소는 type 속성을 명시하지 않으면 submit 기능을 수행한다. 즉 폼에서 이를 대체하기 위한 목적으로는 안성맞춤이다.<br>
+    -   button 속성값
+        -   type="submit" : 폼의 전송 기능을 담당한다.
+        -   type="reset" : 폼 작성 내용을 초기화하는데 사용한다.
+        -   type="button" : 흔히 자바스크립트를 이용한 기능 구현에 많이 사용한다.
+        -   (출처: https://webdir.tistory.com/421)
+
+-   css selector combination 에 이런 규칙이 있음
+    - 후손 셀렉터(Descendent Selector) : '스페이스'로 연결
+    - 자식 셀렉터(Child Selector) : ' >' 로 연결
+    - ex) <h2 id="clock"></h2>이면 h2#id로 스페이스 없이 연결
+-   interval = 매번 일어나야 하는 무언가!<br>
+-   setInterval(실행할 함수, 실행할 함수의 주기(ms단위1초=1000))!
+-   setTimeout(sayHello, 1000);
+1초 기다렸다가 한번만 실행.
