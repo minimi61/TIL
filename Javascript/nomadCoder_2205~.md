@@ -118,3 +118,18 @@ setter 메소드: 인스턴스나 클래스 변수의 값을 적용하는 메소
 -   setInterval(실행할 함수, 실행할 함수의 주기(ms단위1초=1000))!
 -   setTimeout(sayHello, 1000);
 1초 기다렸다가 한번만 실행.
+
+
+### 5.1 ~ (220531)
+-   string이 적어도 2개 이상의 문자를 가지고 있게 만드는 방법 
+    -   number -> string으로 바꾸기
+        -   String(date.getHours())
+        -   date.getHours().toString()
+    -   padStart(최소 문자길이, 추가할 내용): 앞에 문자 추가 / padEnd(): 뒤에 문자 추가
+    -   ex ) "1".padStart(2, "0") : 문자 길이가 2이상이여야 하고 없으면 앞에 0 추가 <br>
+결과 : "01"
+-   Math 메서드
+    -   Math.ceil() 올림
+    -   Math.floor() 내림
+    -   ex) const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        -   Math부터는 숫자임.
