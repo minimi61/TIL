@@ -14,6 +14,7 @@
     return Array(n).fill(x).map((v, i) => (i + 1) * v)<br>
     }<br>
 
+    -   fill? map?
     -   Array.prototype.fill(): arr.fill(value[, start[, end]])
         - value: 배열을 채울 값
         - start 시작 인덱스, 기본값은 0
