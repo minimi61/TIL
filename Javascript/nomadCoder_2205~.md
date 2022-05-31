@@ -133,3 +133,14 @@ setter 메소드: 인스턴스나 클래스 변수의 값을 적용하는 메소
     -   Math.floor() 내림
     -   ex) const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
         -   Math부터는 숫자임.
+-   const bgimg = document.createElement("img");<br>
+    createElement를 통해 "img"태그를 만든다
+-   bgimg.src = `img/${chosenImg}`;<br>
+    src를 만들어줄 수 있음
+-   document.body.appendChild(bgimg);<br>
+    HTML에 body태그 안 새로운 태그 만들어 줌<br>
+    appendChild 메서드는 한번에 한개의 노드만 추가할 수 있음
+    -   append, appnedChild 메서드 모두 부모노드에 자식 노드 추가
+    -   append는 여러 개의 자식 요소 설정 가능<br>
+    ex) document.body.append(div, 'hello',span, p)
+-   css => position : absoulute 부모에 position: relative 안줘도 사용 가능, body를 기준으로 위치하기도
