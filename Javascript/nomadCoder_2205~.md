@@ -140,7 +140,14 @@ setter 메소드: 인스턴스나 클래스 변수의 값을 적용하는 메소
 -   document.body.appendChild(bgimg);<br>
     HTML에 body태그 안 새로운 태그 만들어 줌<br>
     appendChild 메서드는 한번에 한개의 노드만 추가할 수 있음
-    -   append, appnedChild 메서드 모두 부모노드에 자식 노드 추가
+    -   append, appnedChild 메서드 모두 부모노드에 자식 노드 추가, 가장 뒤에
+    -   prepend는 가장 위에 
     -   append는 여러 개의 자식 요소 설정 가능<br>
     ex) document.body.append(div, 'hello',span, p)
 -   css => position : absoulute 부모에 position: relative 안줘도 사용 가능, body를 기준으로 위치하기도
+-   세 가지 동작(기본값방지, 텍스트 저장, text상자비우기)는 한번에 이루어지는 세트이기때문에 효율성 및 편의를 위해 함수로 묶어준다.
+function handleTodoSubmit() {<br>
+event.preventDefault();<br>
+const newTodo = toDoInput.value;<br>
+toDoInput.value = "";<br>
+}
