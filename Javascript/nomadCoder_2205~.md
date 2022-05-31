@@ -110,13 +110,13 @@ setter 메소드: 인스턴스나 클래스 변수의 값을 적용하는 메소
         -   type="button" : 흔히 자바스크립트를 이용한 기능 구현에 많이 사용한다.
         -   (출처: https://webdir.tistory.com/421)
 
--   css selector combination 에 이런 규칙이 있음
+- css selector combination 에 이런 규칙이 있음
     - 후손 셀렉터(Descendent Selector) : '스페이스'로 연결
     - 자식 셀렉터(Child Selector) : ' >' 로 연결
     - ex) `<h2 id="clock"></h2>`이면 h2#id로 스페이스 없이 연결
--   interval = 매번 일어나야 하는 무언가!
--   setInterval(실행할 함수, 실행할 함수의 주기(ms단위1초=1000))!
--   setTimeout(sayHello, 1000);
+- interval = 매번 일어나야 하는 무언가!
+- setInterval(실행할 함수, 실행할 함수의 주기(ms단위1초=1000))!
+- setTimeout(sayHello, 1000);
 1초 기다렸다가 한번만 실행.
 
 
