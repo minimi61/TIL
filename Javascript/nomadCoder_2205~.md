@@ -151,3 +151,23 @@ event.preventDefault();<br>
 const newTodo = toDoInput.value;<br>
 toDoInput.value = "";<br>
 }
+
+### 6.1~ (220602)
+-   html에 태그 넣기 document.createElement("li")
+-   li라는 태그 안에 span(상수로 만들어줌) 넣기<br>
+li.appendChild(span);
+-   span에 받아온 값 넣어주기<br>
+span.innerText = newTodo;
+-   넣고 싶은 위치에 전체 태그 넣기<br>
+todoList.appendChild(li)
+-   deleteTodo 만들기(event.target.parentElemet)
+    -   event를 이용하여 본인의 위치 파악
+    -   target은 클릭된 HTML element(모든 HTML element에는 하나 이상의 property가 있음)
+    -   parent  Elemet는 클릭된 element의 부모
+    -   삭제하기: li.remove()
+-   JSON.stringify() : JS object나 array 등 어떤 js 코드건 브라우저가 문자열로 바꿔준다
+    -   text의 경우 데이터 타입이 아니기에 string으로 데이터 타입을 바꿔주는 경우 사용
+
+-   JSON.parse() : JS가 이해할 수 있는 살아있는 array로 만든다.
+
+-   const -> let으로 바꾸면 값의 업데이트가 가능
