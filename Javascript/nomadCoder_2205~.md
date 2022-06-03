@@ -171,3 +171,22 @@ todoList.appendChild(li)
 -   JSON.parse() : JS가 이해할 수 있는 살아있는 array로 만든다.
 
 -   const -> let으로 바꾸면 값의 업데이트가 가능
+
+
+### 6.4 ~ (220603)
+-   const li = document.createElement("li");<br>
+li.id = newTodo.id;<br>
+li는 DOM을 직접 건드림, DOM의 id는 문자열. <br>
+즉 우리가 newTodo.id로 number를 넣어주었어도, DOM에선 string으로 형변환해서 받아들이는 것으로 보임.
+-   filter 함수를 사용 <br>
+삭제함 -> 새로운 array만듬 -> 'localStorage에 저장하는 함수' 호출
+해야 localStorage에 저장이 실행되는거
+-   filter() :
+    -boolean(참 거짓)을 이용한 함수 sexyfilter를 만듦<br>
+    그 안에 !== (not) 을 활용해서 우리가 삭제하고픈 애를 뺀 나머지만 return 하게 한다.
+    <br><br>
+const life = ["희망", "불안", "행복", "비꼬는 마음"]<br>
+function goodLife(item){<br>
+return item !== "비꼬는 마음"<br>
+}<br>
+//life = ["희망", "불안", "행복"]
