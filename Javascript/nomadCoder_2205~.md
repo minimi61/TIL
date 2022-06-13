@@ -192,6 +192,7 @@ return item !== "비꼬는 마음"<br>
 //life = ["희망", "불안", "행복"]
 
 
+<<<<<<< HEAD
 ### 220609
 -   localstorage 배열형식 저장하기
     -   배열형식 저장
@@ -200,3 +201,16 @@ return item !== "비꼬는 마음"<br>
         -   let output = localstorage.getItem("key");<br>
             let arr = JSON.parse(output);
             
+=======
+### 마무리 (220609)
+- weather api 이용 
+-   navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError); 잘 불러올 경우와 안될 경우
+-   경도 위도를 불러옴 <br>
+    ex) const lat = position.coords.latitude;
+-   fetch(url)메서드로 url을 넣고 실행시켜줌
+-   fetch(url).then(response => response.json()).then(date => {화면에 나타낼 부분들})
+
+-   netlify로 배포하려고 하는데 계속 build.command failed가 등장 <br>
+계속 찾다가 npm update를 한 후 다시 사이트 만들기 시작<br>
+된다...
+>>>>>>> ce38a18f3a5916fb708d9c7dc1db69caaf370bb1

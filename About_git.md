@@ -250,3 +250,7 @@ $ git show Version_2
     -   배포/빌드 서버 등에 계속해서 최근 항목만을 가져오는 등의 경우나 로컬에 있는 모든 내용을 덮어쓰려는 경우 사용하면 될 것 같음(해당 브랜치 강제로 리셋)
     -   git fetch --all 
     -   git reset --hard origin/main
+
+### 20220609
+-    error: src refspec main does not match any 등장(git push 할 때)
+-   git remote update -> git fetch 한 후 git status로 브랜치 확인 후 다시 해보기
