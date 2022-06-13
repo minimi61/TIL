@@ -190,3 +190,13 @@ function goodLife(item){<br>
 return item !== "비꼬는 마음"<br>
 }<br>
 //life = ["희망", "불안", "행복"]
+
+
+### 220609
+-   localstorage 배열형식 저장하기
+    -   배열형식 저장
+        -   localstorage.setItem("key",JSON.stringify(arr))
+    -   저장된 배열형식 출력
+        -   let output = localstorage.getItem("key");<br>
+            let arr = JSON.parse(output);
+            
