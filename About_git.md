@@ -261,3 +261,8 @@ error: failed to push some refs to
 -   git pull이 안될시에 git pull origin 브런치명 --allow-unrelated-histories 로 불러준다.
 -   --allow-unrelated-histories   이 명령 옵션은 이미 존재하는 두 프로젝트의 기록(history)을 저장하는 드문 상황에 사용된다고 한다. 즉, git에서는 서로 관련 기록이 없는 이질적인 두 프로젝트를 병합할 때 기본적으로 거부하는데, 이것을 허용해 주는 것이다.
 
+### 20220616
+-   git pull 안먹을 때
+    -   git branch 확인 후 
+    -   git checkout 메인으로
+    -   git branch --set-upstream-to=origin/main main 로컬에 branch가 생성되었으니 리모트 branch를 추적하게 해야함
