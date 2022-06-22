@@ -35,3 +35,6 @@ let resultArray = pointArray.sort(function (a, b) {
     -   arr.sort(function(a, b)  {<br>
   return b - a;<br>
 });
+
+### 220622 return
+-   return문은 if문이 참이면 종료시키는 것, 조건에 부합하지 않으면 if문 아래에 작성할 출력문이 실행
