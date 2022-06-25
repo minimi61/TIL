@@ -26,3 +26,10 @@
     -   property에 eventListener 넣는 것도 가능함<br>
         클릭 - {onClick : () => console.log('im clicked')}
     -   콘솔 안 뜰 경우 대소문자 확인(js와 같은지)
+
+-   JSX : 자바스크립트를 확장한 문법, 보통의 HTML과 비슷, 그러나 property를 HTML 태그의 속성처럼 적으면 됨<br>
+    -   const Title = <h3 onMouseEnter = { () => console.log('mouse enter')}>Hello</h3>
+    -   style = {{ backgroundColor: "tomato" }} -> 스타일은 {} 2개임
+    -   JSX를 브라우저가 온전히 이해하지 못하므로 이해할 수 있게 https://unpkg.com/@babel/standalone/babel.min.js 를 설치해야함<br>
+    -> JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔준다. 바벨로 가져온 후 바벨 문장이 있는 곳 상위 script type = "text/babel"로 적어줘야 인식함
+
