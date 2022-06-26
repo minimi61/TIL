@@ -32,4 +32,5 @@
     -   style = {{ backgroundColor: "tomato" }} -> 스타일은 {} 2개임
     -   JSX를 브라우저가 온전히 이해하지 못하므로 이해할 수 있게 https://unpkg.com/@babel/standalone/babel.min.js 를 설치해야함<br>
     -> JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔준다. 바벨로 가져온 후 바벨 문장이 있는 곳 상위 script type = "text/babel"로 적어줘야 인식함
+#### 컴포넌트의 첫 글자는 무조건 대문자로 시작!(직접 만든 요소는 전부 대문자로 시작해야함)
 
