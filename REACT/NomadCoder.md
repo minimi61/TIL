@@ -39,3 +39,25 @@
 #### 컴포넌트의 첫 글자는 무조건 대문자로 시작!(직접 만든 요소는 전부 대문자로 시작해야함)
 -   리액트의 장점 : UI에서 바뀐 부분만 업데이트 해줌
 
+### 220627
+-   리액트 js에서 데이터를 저장시켜 자동으로 리렌더링을 일으키는 방법
+    -   const data = React.useState() console.log 시키면
+        [undefined, f ] -> undefined와 함수가 적힌 배열이 나타남<br>
+        undefined는 data이고 f는 data를 바꿀 때 사용하는 함수
+    -   React.useState() 함수는 초기값을 설정할 수 있음 <br>
+        즉, undefined는 초기값이고 두 번째 요소인 f는 그 값을 바꾸는 함수
+    -   배열을 꺼내기 <br>
+        const x = [1, 2, 3]<br>
+        const [a, b, c] = x;으로 꺼낼 수 있음
+    -   React.useState() 배열에서
+        보통 데이터에는 counter처럼 원하는대로 붙이고
+        f는 set 뒤에 데이터 이름을 붙임 (setCounter)
+        어떤값을 부여하던 setCounter 함수는 그 값으로 업데이트하고 리렌더링 일으킴
+        1. counter라는 데이터를 받음
+        2. return()에 그 데이터를 담고 있음 (리턴은 사용자가 보게될 컴포넌트)
+        3. 버튼이 클릭되면 counter값을 바꿔줄 함수 호출 -> setCounter
+        4. counter의 새로운 값을 가지고 counter 함수를 호출
+        5. 그 새로운 값은 setCounter(counter + 1)에 써준 counter + 1
+    -   state를 세팅하는 데는 2가지 방법이 있다.
+        1. 직접 할당 :setState(state +1) 현재 state랑 관련이 없는 값을 새로운 state로 하고싶은 경우
+        2. 함수를 할당:setState(state => state +1) (함수의 첫번째 인자는 현재 state 이다) 현재 state에 조금의 변화를 주어서 새로운 state를 주고 싶은 경우
