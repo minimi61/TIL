@@ -61,3 +61,9 @@
     -   state를 세팅하는 데는 2가지 방법이 있다.
         1. 직접 할당 :setState(state +1) 현재 state랑 관련이 없는 값을 새로운 state로 하고싶은 경우
         2. 함수를 할당:setState(state => state +1) (함수의 첫번째 인자는 현재 state 이다) 현재 state에 조금의 변화를 주어서 새로운 state를 주고 싶은 경우
+
+### 220628
+-    input 옆의 쓰는 label의 for 속성은 react에서는 htmlFor로 표시한다.
+-   controlled component :Input 태그 나오면 value, onChange 속성을 붙여서 상태를 관리하자
+    -   onChange = {onChange} 
+    input에 변화가 생기면 onChange 함수 실행
