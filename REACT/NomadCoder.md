@@ -71,3 +71,15 @@
 ### 220629
 -   state 값으로 input을 enabled할지 disabled할지 결정 가능함
 -   디폴트 값이 false면 disabled = {!flipped} 로 disable적용되게 만들어줌
+-   useState의 두번째 인자인 modifier 함수를 실행하면 해당 컴포넌트가 리렌더링된다
+    -   리렌더링 조건
+        -   props가 바뀔 때
+        -   state가 바뀔 때
+        -   부모 컴포넌트가 리렌더링될 때 
+-   컴포넌트는 그 안에 또 다른 컴포넌트를 렌더링할 수 있음
+    -   App 컴포넌트는 root div를 그려주는 역할
+    -   App 컴포넌트는 그 안에 다른 2개의 컴포넌트들을 렌더링
+    -   App 컴포넌트가 state를 가지도록 만들자
+    -   select는 그냥 HTML
+    -   HTML에 {}를 쓰면 js로 쓸 수 있음
+    -   state를 변화시킬 때, 모든 것이 다 새로고침됨
