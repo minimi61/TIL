@@ -67,3 +67,7 @@
 -   controlled component :Input 태그 나오면 value, onChange 속성을 붙여서 상태를 관리하자
     -   onChange = {onChange} 
     input에 변화가 생기면 onChange 함수 실행
+
+### 220629
+-   state 값으로 input을 enabled할지 disabled할지 결정 가능함
+-   디폴트 값이 false면 disabled = {!flipped} 로 disable적용되게 만들어줌
