@@ -83,3 +83,20 @@
     -   select는 그냥 HTML
     -   HTML에 {}를 쓰면 js로 쓸 수 있음
     -   state를 변화시킬 때, 모든 것이 다 새로고침됨
+
+- tips
+    -   = () => {} 일 경우에는 함수가 여러개 쓸 때
+    -   = () => () 는 return이 있거나 단일로 쓸 때
+    -   onClick : 클릭시 이벤트(button)
+    -   onChange : 타자 입력시 수정(input)
+
+- 버튼의 style property(속성)사용시 <br>
+    -  style - {{<br>
+        backgroundColor: 'tomato',<br>
+        color: 'white'<br>
+    }} : 중괄호 두개 열고 일반적인 HTML방식으로
+    -   여러개의 버튼 만들시 한가지의 버튼 컴포넌트로 만들어 재사용하면 효율적
+        -   function Btn (props) Btn으로부터 전달받은 속성인 props로 인자를 받을 수 있음(이름은 내맘대로)
+        -   <Btn banana="라라" /> 자동으로 Btn함수내 ({banana:'라라'}) or (props)로 전달
+        -   Btn({props.banana}) == Btn({banana})
+    ###    -   이 오브젝트에 Btn() 컴포넌트의 첫번째 인자로 주어짐 (유일한 인자, 두번째 인자는 없다???)
