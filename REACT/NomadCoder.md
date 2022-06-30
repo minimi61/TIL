@@ -99,4 +99,33 @@
         -   function Btn (props) Btn으로부터 전달받은 속성인 props로 인자를 받을 수 있음(이름은 내맘대로)
         -   <Btn banana="라라" /> 자동으로 Btn함수내 ({banana:'라라'}) or (props)로 전달
         -   Btn({props.banana}) == Btn({banana})
-    ###    -   이 오브젝트에 Btn() 컴포넌트의 첫번째 인자로 주어짐 (유일한 인자, 두번째 인자는 없다???)
+    -   이 오브젝트에 Btn() 컴포넌트의 첫번째 인자로 주어짐 (유일한 인자, Btn({text}, {No})
+
+### 220630
+-   리액트에서는 font-size와 같이 중간에 대시 기호(-)가 들어간 속성명은 fontSize와 같이 카멜 케이스로 바꿔야함
+-   props 다시
+    -   function App(<SaveBtn />)은 SaveBtn이라는 함수형 컴포넌트를 부르는 것
+    -   function SaveBtn () {} <= 컴포넌트
+    -   App 함수는 JSX 내부
+    -   style 꾸미기  태그내 style={{ 안에 object 형식으로 }}
+    -   props = App( <Btn ~~/>) 으로부터 보낸 모든 것(오브젝트)들을 전달받는 property
+    -   object 바로 부르려면 Btn({banana})
+    -   props에 이벤트를 전달한다고 해서 이벤트가 전달되는 것은 아니다, html태그안에 onClick을 직접 작성하고 파라미터로 넘긴 이벤트 함수를 넣어줘야함
+-  React.memo(Btn) : 경고문
+    -   리액트는 컴포넌트 상태가 변경되면 리랜더링한다
+    -   리랜더링할 필요가 없는 컴포넌트도 랜더링되는 것이 문제
+    -   이런 문제 해결한 것이 리액트메모, props가 변경되지 않는다면 리랜더링되지 않게 한다.(재사용성 높은 컴포넌트에 사용용이)
+-   Prop Types
+    -   리액트는 파라미터를 잘 못 넘겨도 확인할 수 없는 문제점이 존재, 이런 문제를 줄이기 위해서 PropTypes라는 모듈의 도움있음
+    -  Btn이 어떤 prop들을 받는지 검사하는게 가능하게끔 도와줌(Btn.propTypes)
+    -   src를 불러서 바벨위에 설치
+    -   .isRequired를 통하여 필수적으로 필요한 것을 인식
+    -   
+    ```
+    Btn.propTypes  = {
+        text: PropTypes.string.isRequired,
+        fontSize: PropTypes.number
+    } 
+    ```
+    -   Btn({fontSize = 16})으로 기본 값 설정 가능
+-   JSX 문법에서 return문을 사용할 때 그 뒤에 소괄호를 사용해야 하는 규칙   
