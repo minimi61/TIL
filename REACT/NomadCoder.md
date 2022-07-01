@@ -150,11 +150,11 @@
             -   
             ```
             useEffect(() => {
-    console.log('hi');
-    return function () {
-      console.log('bye')
-    }
-  },[])
-  return <h1>Hello</h1>
+                console.log('hi');
+                return function () {
+                console.log('bye')
+                }
+            },[])
+            return <h1>Hello</h1>
             ```
 
