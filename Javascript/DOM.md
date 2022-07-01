@@ -9,6 +9,7 @@
 -   좁은 의미: document 객체와 관련된 객체의 집합
 
 <img src='https://image.slidesharecdn.com/dom-130225112417-phpapp02/95/an-introduction-to-the-dom-3-638.jpg?cb=1367487766'>
+
 -   DOM은 tree형식의 자료구조임
     -   tree형 자료구조 : 위의 root에서 아래 node로 퍼져가는 형태
     -   위쪽 node는 부모, 아랫쪽 노드는 자식, 자식이 없는 경우 leaf node
