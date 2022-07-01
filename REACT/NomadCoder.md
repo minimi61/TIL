@@ -129,3 +129,32 @@
     ```
     -   Btn({fontSize = 16})으로 기본 값 설정 가능
 -   JSX 문법에서 return문을 사용할 때 그 뒤에 소괄호를 사용해야 하는 규칙   
+
+### 220701
+-   css를 이용시 전체가 다 적용될 수 있다 그 해결책으로 module을 사용 
+-   module.css로 import하여 className = {styles.btn} 이렇게 부를 수 있다
+#### ? 내내 다른 클래스 이름을 사용하기 위해 기억하는 것보다 훨씬 낫다? 기억할 필요가 없어진다? 리액트가 다 랜덤하게 바꿔준다? -> 
+-   여기서 스타일은 className이나 id로 import한 스타일 객체의 property를 전달하여 적용된다는 것! 이는 기존의 "어떤 class나 id에 적용할 스타일"이 아닌 "특정 jsx element에 적용할 스타일"로 생각할 수 있다~ react 컴파일 과정 중 random class나 id가 생성되기 때문에 .css 파일의 class, id 이름을 굳이 외울 필요없다
+-   useEffect
+    -   두개의 argument를 가지는 함수 
+        -   실행하려는 코드, dependency(지켜보려는 것) 구성
+    - 한번만 실행하고 싶을때  
+        -   첫번째 argument는 우리가 딱 한번만 실행하고픈 코드, 두번째는 [] 배열을 넣어줌
+    -   특정 코드 변화있을 때만 원하는 코드 실행 방법 
+        -   useEffect(()=> {console.log('search for'), keyword})이런 식으로 두번째로 써줌([] 대신, 배열안에 여러개 쓸 수 있음, 그렇다면 둘중에 하나라도 변화가 있으면 코드 실행)
+        -   keyword가 변화할 때 코드 실행할 것이라고 react.js에 알려주는 것
+        -   [] 빈 배열일 때 코드가 단 한번만 실행되는 이유: react가 지켜볼 것(dependencies)이 없어서 한번만 실행됨
+        -   cleanup 
+            -   컴포넌트가 destroy될 때도 코드 실행가능
+            - 리랜더링 -> 이전 이펙트 클린업 -> 이펙트 실행
+            -   
+            ```
+            useEffect(() => {
+    console.log('hi');
+    return function () {
+      console.log('bye')
+    }
+  },[])
+  return <h1>Hello</h1>
+            ```
+
