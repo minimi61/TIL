@@ -140,22 +140,33 @@
         -   실행하려는 코드, dependency(지켜보려는 것) 구성
     - 한번만 실행하고 싶을때  
         -   첫번째 argument는 우리가 딱 한번만 실행하고픈 코드, 두번째는 [] 배열을 넣어줌
-    -   특정 코드 변화있을 때만 원하는 코드 실행 방법 
+    -   Deps : 특정 코드 변화있을 때만 원하는 코드 실행 방법
         -   useEffect(()=> {console.log('search for'), keyword})이런 식으로 두번째로 써줌([] 대신, 배열안에 여러개 쓸 수 있음, 그렇다면 둘중에 하나라도 변화가 있으면 코드 실행)
         -   keyword가 변화할 때 코드 실행할 것이라고 react.js에 알려주는 것
         -   [] 빈 배열일 때 코드가 단 한번만 실행되는 이유: react가 지켜볼 것(dependencies)이 없어서 한번만 실행됨
         -   cleanup 
-            -   컴포넌트가 destroy될 때도 코드 실행가능
+            -   컴포넌트가 destroy될 때도 코드 실행가능(나타나고 사라질때)
             - useEffect 내에 return 함수로 이펙트 클린업
             - 리랜더링 -> 이전 이펙트 클린업 -> 새로운 이펙트 실행(순서는 클로져때문)
             -   
             ```
             useEffect(() => {
                 console.log('hi');
-                return function () {
+                return function () { <= 이펙트 클린업(반대의 상황도 나타내줌)
                 console.log('bye')
                 }
             },[])
             return <h1>Hello</h1>
             ```
+
+### 220709
+-   ...Array
+    -   const food = [1,2,3]
+    -   [6,food] => [6, Array(3)]
+    -   [6, ...food] =>[6,1,2,3] food array의 element들을 더해서 받을 수 있음
+-   .map(()=>~~)
+    -   같은 component의 list를 render할 때는 key라는 유니크한 prop을 넣어줘야함 
+    -   ex) <li key={index}>
+    -   react가 기본적으로 list에 있는 모든 item들을 인식하기 때문
+### 질문! form태그 안 onChange는 value를 통해서 값을 받을 수 있음, button 태그 안 onClick은 어떻게 value를 받지?
 
