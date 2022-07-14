@@ -266,3 +266,9 @@ error: failed to push some refs to
     -   git branch 확인 후 
     -   git checkout 메인으로
     -   git branch --set-upstream-to=origin/main main 로컬에 branch가 생성되었으니 리모트 branch를 추적하게 해야함
+
+### 220714
+-    There is no tracking information for the current branch. 
+Please specify which branch you want to merge with. 뭐라뭐라 로컬에 branch가 생성되었으니 그걸 remote branch를 추적하게 해줘함
+-   내 깃 브랜치에서 main을 받고 싶었기에 아래로 했더니 불러와짐!
+-   $ git branch --set-upstream-to=origin/main 

@@ -170,3 +170,13 @@
     -   react가 기본적으로 list에 있는 모든 item들을 인식하기 때문
 ### 질문! form태그 안 onChange는 value를 통해서 값을 받을 수 있음, button 태그 안 onClick은 어떻게 value를 받지?
 
+### 220710
+-   fetch 사용법
+    - fetch('url')<br>
+.then(response => response.json())<br>
+.then(response(or json) => data.filter(item => item.isRequired));<br>
+-   리액트 map
+    -   {movies.map((movie) => (
+          <div key={movie.id}>{movie.title}</div>
+      ) 
+    -   map(()=>(괄호 안에 써준다))
